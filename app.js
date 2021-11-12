@@ -7,6 +7,24 @@ const galleryImages = document.querySelector(".gallery-images");
 //
 let savedImage = [];
 
+// all images
+data.forEach(electron => {
+    let html =``;
+    html = `
+        <div class="image-gallery">
+            <div class="option">
+                <h3>${electron.name}</h3>
+                <a href="${electron.url}" download="mountain">Download</a>
+            </div>
+            <div class="gallery-overflow">
+                <img src="${electron.url}" alt="Mountain">
+            </div> 
+            <button class="color">${electron.color}</button>
+        </div>
+    `;
+    gallery.innerHTML += html;
+
+});
 // Event listerners
 gallery.addEventListener("click", (e) => {
     saveToGallery(e);

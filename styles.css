@@ -51,6 +51,8 @@
 
 .home-gallery img {
   width: 100%;
+  height: 337px;
+  object-fit: cover;
 }
 
 .home-gallery img:hover {
@@ -144,7 +146,7 @@
   pointer-events: all;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1500px) {
   .home-gallery {
     max-width: 1500px;
   }
