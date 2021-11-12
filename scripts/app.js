@@ -15,7 +15,7 @@ const app = () => {
             <div class="image-gallery">
                 <div class="option">
                     <h3>${electron.name}</h3>
-                    <a href="${electron.url}" download="electron-${electron.category}-${electron.id}">Download</a>
+                    <a href="${electron.url}" download="pexel-pixar-${electron.id * 567}">Download</a>
                 </div>
                 <div class="gallery-overflow">
                     <img src="${electron.url}" alt="Mountain">
@@ -46,7 +46,6 @@ const app = () => {
 if(document.body.classList.contains('app')){
     app();
 }
-console.log(document.body)
 if(document.body.classList.contains('gal')){
     displayLocalsInGallery();
 }
@@ -111,21 +110,29 @@ function displayLocalsInGallery(){
     images.forEach(function(img){
     //local storage elements
         //local div
-        const localDiv = document.createElement("div");
-        localDiv.classList.add("local-div");
-        galleryImages.append(localDiv);
+        // const localDiv = document.createElement("div");
+        // localDiv.classList.add("local-div");
+        // galleryImages.append(localDiv);
 
-        //local image 
-        const localImage = document.createElement("img");
-        localImage.src = img;
-        localDiv.append(localImage);
+        // //local image 
+        // const localImage = document.createElement("img");
+        // localImage.src = img;
+        // localDiv.append(localImage);
 
-        //local download button
-        const download = document.createElement("i");
-        download.classList.add("download-btn");
-        download.classList.add("fas");
-        download.classList.add("fa-download");
-        localDiv.append(download);
+        // //local download button
+        // const download = document.createElement("i");
+        // download.classList.add("download-btn");
+        // download.classList.add("fas");
+        // download.classList.add("fa-download");
+        // localDiv.append(download);
+        let localStorage = '';
+        localStorage = `
+            <div class="local-div">
+                <img src="${img}" alt="">
+                <button class="download-btn"><img src="./collection/download.svg" alt="download button"></button>
+            </div>
+        `;
+        galleryImages.innerHTML += localStorage;
     });
 }
 
