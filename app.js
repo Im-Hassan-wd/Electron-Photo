@@ -7,40 +7,48 @@ const galleryImages = document.querySelector(".gallery-images");
 //
 let savedImage = [];
 
-// all images
-data.forEach(electron => {
-    let html =``;
-    html = `
-        <div class="image-gallery">
-            <div class="option">
-                <h3>${electron.name}</h3>
-                <a href="${electron.url}" download="mountain">Download</a>
-            </div>
-            <div class="gallery-overflow">
-                <img src="${electron.url}" alt="Mountain">
-            </div> 
-            <button class="color">${electron.color}</button>
-        </div>
-    `;
-    gallery.innerHTML += html;
 
-});
 // Event listerners
-gallery.addEventListener("click", (e) => {
-    saveToGallery(e);
-    copyToClipboard(e)
-});
-copyPopup.addEventListener("transitionend", () => {
-    const popup = copyPopup.children[0];
-    copyPopup.classList.remove("active") ;
-    popup.classList.remove("active") ;
-});
-downloadPopup.addEventListener("transitionend", () => {
-    const popup = downloadPopup.children[0];
-    downloadPopup.classList.remove("active") ;
-    popup.classList.remove("active") ;
-});
-// galleryBtn.addEventListener("click", viewGallery);
+// preventing other html file from unconditional err
+const app = () => {
+    data.forEach(electron => {
+        let html =``;
+        html = `
+            <div class="image-gallery">
+                <div class="option">
+                    <h3>${electron.name}</h3>
+                    <a href="${electron.url}" download="electron-${electron.category}-${electron.id}">Download</a>
+                </div>
+                <div class="gallery-overflow">
+                    <img src="${electron.url}" alt="Mountain">
+                </div> 
+                <button style="background:${electron.color}" class="color">${electron.color}</button>
+            </div>
+        `;
+        gallery.innerHTML += html;
+
+    });
+
+    gallery.addEventListener("click", (e) => {
+        saveToGallery(e);
+        copyToClipboard(e)
+    });
+    copyPopup.addEventListener("transitionend", () => {
+        const popup = copyPopup.children[0];
+        copyPopup.classList.remove("active") ;
+        popup.classList.remove("active") ;
+    });
+    downloadPopup.addEventListener("transitionend", () => {
+        const popup = downloadPopup.children[0];
+        downloadPopup.classList.remove("active") ;
+        popup.classList.remove("active") ;
+    });
+    // galleryBtn.addEventListener("click", viewGallery);
+}
+
+if(document.body.classList.contains('app')){
+    app();
+}
 
 // functions
 function saveToGallery(e) {
@@ -50,10 +58,12 @@ function saveToGallery(e) {
         downloadPopup.classList.add("active")
         popup.classList.add("active");
         // galley to save
-        // const thisImage = e.target.getAttribute("href");
-        // const img = document.createElement("img");
-        // img.src = thisImage;
-        // savedImage.push(img);
+        const thisImage = e.target.getAttribute("href");
+        const img = document.createElement("img");
+        img.src = thisImage;
+        savedImage.push(img);
+        localStorage.setItem("savedImage", JSON.parse(savedImage));
+        // localStorage.removeItem("savedImage")
     }    
 }
  // map through the array
@@ -80,4 +90,8 @@ function copyToClipboard(e) {
         popup.classList.add("active");
         
     }
+}
+
+if(localStorage.getItem("savedImage")){
+    console.log(localStorage.getItem("savedImage"))
 }
