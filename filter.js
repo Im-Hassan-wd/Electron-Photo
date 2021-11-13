@@ -13,7 +13,7 @@ function searchCategory(e) {
 		collection.category === "Mountain";
 	});
 	data = filteredData;
+	form.innerHTML += data; 
 	// reset form 
 	form.reset(); 
 }
-form.innerHTML += data;
