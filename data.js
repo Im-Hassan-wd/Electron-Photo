@@ -74,34 +74,69 @@ const data = [
         "name": "Pink",
         "url": "creative/creative1.jpg",
         "category": "creative",
-        "color": "#d99f8c"
+        "color": "#df96a7"
     },
     {
         "id": 12,
         "name": "Drink",
         "url": "creative/creative2.jpg",
         "category": "creative",
-        "color": "#d99f8c"
+        "color": "#02712d"
     },
     {
         "id": 13,
-        "name": "Drink",
+        "name": "Think",
         "url": "creative/creative3.jpg",
         "category": "creative",
-        "color": "#d99f8c"
+        "color": "#684742"
     },
     {
         "id": 14,
-        "name": "Drink",
+        "name": "Palee",
         "url": "creative/creative4.jpg",
         "category": "creative",
-        "color": "#d99f8c"
+        "color": "#d8a87b"
     },
     {
         "id": 15,
-        "name": "Drink",
-        "url": "creative/creative5.png",
+        "name": "Night Moon",
+        "url": "creative/creative5.jpg",
         "category": "creative",
-        "color": "#d99f8c"
+        "color": "#04253e"
+    },
+    {
+        "id": 16,
+        "name": "Pencil",
+        "url": "creative/creative6.jpg",
+        "category": "creative",
+        "color": "#dbc078"
+    },
+    {
+        "id": 17,
+        "name": "Hand Sun",
+        "url": "creative/creative7.jpg",
+        "category": "creative",
+        "color": "#a08C88"
+    },
+    {
+        "id": 18,
+        "name": "Void",
+        "url": "creative/creative8.jpg",
+        "category": "creative",
+        "color": "#908881"
+    },
+    {
+        "id": 19,
+        "name": "Cellphone",
+        "url": "creative/creative9.jpg",
+        "category": "creative",
+        "color": "#5d5b4e"
+    },
+    {
+        "id": 20,
+        "name": "Cream Smoke",
+        "url": "creative/creative10.jpg",
+        "category": "creative",
+        "color": "#005b6d"
     }
 ];

@@ -6,7 +6,8 @@
 }
 
 .home-header {
-  margin: 5% auto;
+  margin: 0 auto;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +58,7 @@
 
 .home-gallery img:hover {
   transform: scale(1.1);
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .gallery-btn a {
@@ -69,6 +70,9 @@
   width: 100px;
   cursor: pointer;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery-btn a i {
@@ -165,6 +169,7 @@
 @media (max-width: 599px) {
   .home-gallery img {
     height: 250px;
+    object-fit: cover;
   }
   .image-galleries {
     grid-template-columns: 1fr 1fr;
