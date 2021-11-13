@@ -8,10 +8,12 @@ function searchCategory(e) {
 	e.preventDefault();
 
 	let input = form.search.value.trim();
-	form.reset();
 
 	filteredData = data.filter(collection => {
 		collection.category === "Mountain";
 	});
 	data = filteredData;
+	// reset form 
+	form.reset(); 
 }
+form.innerHTML += data;
