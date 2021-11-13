@@ -24,7 +24,6 @@ const app = () => {
             </div>
         `;
         gallery.innerHTML += html;
-
     });
 
     gallery.addEventListener("click", (e) => {
@@ -87,6 +86,7 @@ function copyToClipboard(e) {
 
 function saveLocalImage(img){
     let images;
+
     if(localStorage.getItem("images") === null){
         images = [];
     } else {
@@ -98,6 +98,7 @@ function saveLocalImage(img){
 
 function displayLocalsInGallery(){
    let images;
+
     if(localStorage.getItem("images") === null){
         images = [];
     } else {
@@ -108,6 +109,4 @@ function displayLocalsInGallery(){
         localImage.src = img;
         galleryImages.append(localImage);
     });
-    
 }
-

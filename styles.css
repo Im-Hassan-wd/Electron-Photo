@@ -163,21 +163,29 @@
 }
 
 @media (max-width: 599px) {
+  .home-gallery img {
+    height: 250px;
+  }
   .image-galleries {
     grid-template-columns: 1fr 1fr;
   }
 
+  .option,
+  .option h3 {
+    font-size: 13px;
+  }
+
   .download-popup,
   .copy-popup {
-    min-width: 50%;
+    min-width: 70%;
   }
 }
 
-@media (max-width: 499px) {
+/* @media (max-width: 499px) {
   .image-galleries {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 ul {
   list-style: none;
