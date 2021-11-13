@@ -96,10 +96,18 @@ function saveLocalImage(img){
     localStorage.setItem("images", JSON.stringify(images));
 }
 
-function displayLocalsInGallery(img){
-    let localImages = localStorage.getItem("images");
-    //
-    const localImage = '';
+function displayLocalsInGallery(){
+   let images;
+    if(localStorage.getItem("images") === null){
+        images = [];
+    } else {
+        images = JSON.parse(localStorage.getItem("images"));
+    }
+    images.forEach(function(img){
+        const localImage = document.createElement("img");
+        localImage.src = img;
+        galleryImages.append(localImage);
+    });
     
 }
 
