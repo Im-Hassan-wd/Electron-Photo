@@ -5,8 +5,6 @@ const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
 //
-let savedImage = [];
-
 
 // Event listerners
 // preventing other html file from unconditional err
@@ -49,7 +47,9 @@ const app = () => {
 if(document.body.classList.contains('app')){
     app();
 }
-
+if(document.body.id === "gallery"){
+    displayLocalsInGallery();
+}
 // functions
 function saveToGallery(e) {
     if(e.target.tagName === "A"){
@@ -61,19 +61,12 @@ function saveToGallery(e) {
         const thisImage = e.target.getAttribute("href");
         const img = document.createElement("img");
         img.src = thisImage;
-        savedImage.push(img);
-        localStorage.setItem("savedImage", JSON.parse(savedImage));
-        // localStorage.removeItem("savedImage")
+        //add image to local storage
+        saveLocalImage(img.src);
     }    
 }
  // map through the array
-savedImage.forEach(image => {
-    let html = '';
-    html = `
-        <img class="image-1 image" src="${image.currentSrc}" alt="">
-    `;
-    galleryImages.innerHTML += html;
-});
+
 function copyToClipboard(e) {
     if (e.target.classList.contains("color")){
         let hex = e.target.textContent;
@@ -92,6 +85,21 @@ function copyToClipboard(e) {
     }
 }
 
-if(localStorage.getItem("savedImage")){
-    console.log(localStorage.getItem("savedImage"))
+function saveLocalImage(img){
+    let images;
+    if(localStorage.getItem("images") === null){
+        images = [];
+    } else {
+        images = JSON.parse(localStorage.getItem("images"));
+    }
+    images.push(img);
+    localStorage.setItem("images", JSON.stringify(images));
 }
+
+function displayLocalsInGallery(img){
+    let localImages = localStorage.getItem("images");
+    //
+    const localImage = '';
+    
+}
+
