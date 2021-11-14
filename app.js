@@ -40,6 +40,9 @@ const app = () => {
         downloadPopup.classList.remove("active") ;
         popup.classList.remove("active") ;
     });
+    form.addEventListener("submit", (e) => {
+        searchCollection(e);
+    });
     // galleryBtn.addEventListener("click", viewGallery);
 }
 
@@ -110,3 +113,5 @@ function displayLocalsInGallery(){
         galleryImages.append(localImage);
     });
 }
+
+

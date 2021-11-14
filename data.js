@@ -1,4 +1,4 @@
-const data = [
+let data = [
     {
         "id": 1,
         "name": "High",
