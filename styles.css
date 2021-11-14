@@ -14,8 +14,11 @@
   flex-direction: column;
 }
 
-.home-header h1 {
+.home-header .logo {
   font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 10px 0;
 }
 
 .home-header #search {
@@ -40,6 +43,7 @@
   align-items: center;
   max-width: 1000px;
   margin: 10% auto;
+  margin-top: 30px;
   padding: 0 20px;
 }
 
@@ -259,14 +263,17 @@ li h3 {
 }
 
 .local-div {
-   position:relative;
-} 
+  position: relative;
+  z-index: -1;
+}
 
 .download-btn {
-   position: absolute;
-   top: 10px;
-   right: 10px
-} 
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  cursor: pointer;
+}
 
 .image-2 {
   grid-column: 2/4;

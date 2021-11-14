@@ -9,11 +9,11 @@ function searchCategory(e) {
 
 	let input = form.search.value.trim();
 
-	filteredData = data.filter(collection => {
-		collection.category === "Mountain";
-	});
-	data = filteredData;
-	form.innerHTML += data; 
+	// data.filter(collection => {
+	// 	const filteredData = collection.category === "Mountain";
+	// 	form.reset(); 
+	// 	form.innerHTML += data; 
+	// 	data = filteredData;
+	// });
 	// reset form 
-	form.reset(); 
 }

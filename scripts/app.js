@@ -4,6 +4,7 @@ const copyPopup = document.querySelector(".copy-container");
 const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
+const imagesGallery = document.querySelector(".gallery-images div");
 //
 
 // Event listerners
@@ -40,9 +41,6 @@ const app = () => {
         downloadPopup.classList.remove("active") ;
         popup.classList.remove("active") ;
     });
-    form.addEventListener("submit", (e) => {
-        searchCollection(e);
-    });
     // galleryBtn.addEventListener("click", viewGallery);
 }
 
@@ -51,6 +49,7 @@ if(document.body.classList.contains('app')){
 }
 if(document.body.id === "gallery"){
     displayLocalsInGallery();
+    console.log(imagesGallery)
 }
 // functions
 function saveToGallery(e) {
@@ -108,22 +107,24 @@ function displayLocalsInGallery(){
         images = JSON.parse(localStorage.getItem("images"));
     }
     images.forEach(function(img){
-	//local storage elements
+        //local storage elements
 
-	//local div
-	const localDiv = document.createElement("div");
-	locaDiv.classlist.add("local-div");
-	galleryImages.append(localDiv);
+        //local div
+        const localDiv = document.createElement("div");
+        localDiv.classList.add("local-div");
+        galleryImages.append(localDiv);
 
-	//local image 
+        //local image 
         const localImage = document.createElement("img");
         localImage.src = img;
         localDiv.append(localImage);
 
-	//local download button
-	const download = document.createElement("i");
-	download.classList.add("download-btn fas fa-download");
-	localDiv.append(download);
+        //local download button
+        const download = document.createElement("i");
+        download.classList.add("download-btn");
+        download.classList.add("fas");
+        download.classList.add("fa-download");
+        localDiv.append(download);
     });
 }
 
