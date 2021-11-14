@@ -105,8 +105,21 @@ function displayLocalsInGallery(){
         images = JSON.parse(localStorage.getItem("images"));
     }
     images.forEach(function(img){
+	//local storage elements
+
+	//local div
+	const localDiv = document.createElement("div");
+	locaDiv.classlist.add("local-div");
+	galleryImages.append(localDiv);
+
+	//local image 
         const localImage = document.createElement("img");
         localImage.src = img;
-        galleryImages.append(localImage);
+        localDiv.append(localImage);
+
+	//local download button
+	const download = document.createElement("i");
+	download.classList.add("download-btn fas fa-download");
+	localDiv.append(download);
     });
 }
