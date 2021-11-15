@@ -31,7 +31,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/sponge-s-portfolio/master/img/electron-home.PNG)
 
-Inspired by instagram. A similar design to instagram profile page:
+Browse high-quality free stock images from pexel alongside with there corresponding color.
 
 - You can find my demo in link in [contact section](#contact)
 - I got to work more on my grid experience
@@ -49,8 +49,8 @@ Inspired by instagram. A similar design to instagram profile page:
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I) was to build an application to complete the given user stories.
+<!--
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I) was to build an application to complete the given user stories. -->
 
 ## Acknowledgements
 
