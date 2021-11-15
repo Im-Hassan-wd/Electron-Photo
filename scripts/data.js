@@ -138,5 +138,12 @@ let data = [
         "url": "creative/creative10.jpg",
         "category": "creative",
         "color": "#005b6d"
-    }
+    }, 
+    {
+        "id": 21,
+        "name": "Cream Smoke",
+        "url": "interior/interior1.jpg",
+        "category": "interior",
+        "color": "#004b6d"
+    } 
 ];
