@@ -4,7 +4,6 @@ const copyPopup = document.querySelector(".copy-container");
 const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
-const imagesGallery = document.querySelector(".gallery-images div");
 //
 
 // Event listerners
@@ -47,9 +46,9 @@ const app = () => {
 if(document.body.classList.contains('app')){
     app();
 }
-if(document.body.id === "gallery"){
+console.log(document.body)
+if(document.body.classList.contains('gal')){
     displayLocalsInGallery();
-    console.log(imagesGallery)
 }
 // functions
 function saveToGallery(e) {
@@ -106,9 +105,11 @@ function displayLocalsInGallery(){
     } else {
         images = JSON.parse(localStorage.getItem("images"));
     }
-    images.forEach(function(img){
-        //local storage elements
 
+    document.body.querySelector(".downloads").innerText = images.length;
+
+    images.forEach(function(img){
+    //local storage elements
         //local div
         const localDiv = document.createElement("div");
         localDiv.classList.add("local-div");
