@@ -141,7 +141,7 @@ let data = [
     }, 
     {
         "id": 21,
-        "name": "Cream Smoke",
+        "name": "Sofas",
         "url": "interior/interior1.jpg",
         "category": "interior",
         "color": "#004b6d"
