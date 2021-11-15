@@ -260,6 +260,7 @@ li h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  /* pointer-events: none; */
 }
 
 .local-div {
@@ -273,6 +274,9 @@ li h3 {
   right: 10px;
   color: #fff;
   cursor: pointer;
+  background: none;
+  border: none;
+  filter: invert(1);
 }
 
 .image-2 {

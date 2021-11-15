@@ -110,29 +110,25 @@ function displayLocalsInGallery(){
     images.forEach(function(img){
     //local storage elements
         //local div
-        // const localDiv = document.createElement("div");
-        // localDiv.classList.add("local-div");
-        // galleryImages.append(localDiv);
+        const localDiv = document.createElement("div");
+        localDiv.classList.add("local-div");
+        galleryImages.append(localDiv);
 
-        // //local image 
-        // const localImage = document.createElement("img");
-        // localImage.src = img;
-        // localDiv.append(localImage);
+        //local image 
+        const localImage = document.createElement("img");
+        localImage.src = img;
+        localDiv.append(localImage);
 
-        // //local download button
-        // const download = document.createElement("i");
-        // download.classList.add("download-btn");
-        // download.classList.add("fas");
-        // download.classList.add("fa-download");
-        // localDiv.append(download);
-        let localStorage = '';
-        localStorage = `
-            <div class="local-div">
-                <img src="${img}" alt="">
-                <button class="download-btn"><img src="./collection/download.svg" alt="download button"></button>
-            </div>
-        `;
-        galleryImages.innerHTML += localStorage;
+        //download button
+        const downloadBtn = document.createElement("button");
+        downloadBtn.classList.add("download-btn");
+        localDiv.append(downloadBtn)
+
+        //local download
+        const download = document.createElement("img");
+        download.src = "collection/download.svg";
+        downloadBtn.append(download);
+        
     });
 }
 
