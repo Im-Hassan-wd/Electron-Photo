@@ -9,21 +9,39 @@ form.addEventListener("submit", (e) => {
 
 function searchCategory(input) {
 	const filtered = data.filter(collection => collection.category === input.toLowerCase());
-	
-	filtered.forEach(filter => {
-		let html =``;
-        html = `
-            <div class="image-gallery">
-                <div class="option">
-                    <h3>${filter.name}</h3>
-                    <a href="${filter.url}" download="pexel-pixar-${filter.id * 567}">Download</a>
+	if(filtered.length !== 0){
+        filtered.forEach(filter => {
+            let html =``;
+            html += `
+                <div class="image-gallery">
+                    <div class="option">
+                        <h3>${filter.name}</h3>
+                        <a href="${filter.url}" download="pexel-pixar-${filter.id * 567}">Download</a>
+                    </div>
+                    <div class="gallery-overflow">
+                        <img src="${filter.url}" alt="Mountain">
+                    </div> 
+                    <button style="background:${filter.color}" class="color">${filter.color}</button>
                 </div>
-                <div class="gallery-overflow">
-                    <img src="${filter.url}" alt="Mountain">
-                </div> 
-                <button style="background:${filter.color}" class="color">${filter.color}</button>
-            </div>
-        `;
-        gallery.innerHTML += html;
-	})
+            `;
+            gallery.innerHTML = html;
+        });
+    } else if(filtered.length === 0) {
+        data.forEach(electron => {
+            let html =``;
+            html = `
+                <div class="image-gallery">
+                    <div class="option">
+                        <h3>${electron.name}</h3>
+                        <a href="${electron.url}" download="pexel-pixar-${electron.id * 567}">Download</a>
+                    </div>
+                    <div class="gallery-overflow">
+                        <img src="${electron.url}" alt="Mountain">
+                    </div> 
+                    <button style="background:${electron.color}" class="color">${electron.color}</button>
+                </div>
+            `;
+            gallery.innerHTML += html;
+        });
+    }
 }
