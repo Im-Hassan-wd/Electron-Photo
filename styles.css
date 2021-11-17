@@ -21,11 +21,17 @@
   margin: 10px 0;
 }
 
+.home-header .search {
+  display: flex;
+  align-items: center;
+}
+
 .home-header #search {
   width: 200px;
   height: 30px;
   border: 1px solid #4e5150;
   background: none;
+  padding: 0 10px;
 }
 
 .home-header #submit {
@@ -270,6 +276,10 @@ li h3 {
 .local-div {
   position: relative;
   z-index: -1;
+}
+
+.local-div > img {
+  height: 355px;
 }
 
 .download-btn {

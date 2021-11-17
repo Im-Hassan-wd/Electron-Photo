@@ -5,11 +5,19 @@ const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
+let category = ['creative...', 'interior...', 'mountain...'];
 //
 
 // Event listerners
 // preventing other html file from unconditional err
 const app = () => {
+    // chnage search place holder dynamicaly
+    setInterval(() => {
+        let index = Math.floor(Math.random() * category.length);
+        const placeholder = category[index];
+        search.placeholder = placeholder;
+    }, 5000);
+
     data.forEach(electron => {
         let html =``;
         html = `
