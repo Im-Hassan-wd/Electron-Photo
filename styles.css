@@ -87,6 +87,10 @@
   overflow: hidden;
 }
 
+.filtered {
+  display: none;
+}
+
 .option {
   display: flex;
   justify-content: space-between;

@@ -4,6 +4,7 @@ const copyPopup = document.querySelector(".copy-container");
 const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
+const search = document.querySelector("input[type='text']");
 //
 
 // Event listerners
@@ -12,10 +13,10 @@ const app = () => {
     data.forEach(electron => {
         let html =``;
         html = `
-            <div class="image-gallery">
+            <div class="image-gallery" data-category="${electron.category}">
                 <div class="option">
                     <h3>${electron.name}</h3>
-                    <a href="${electron.url}" download="pexel-pixar-${electron.id * 567}">Download</a>
+                    <a href="${electron.url}" download="pexel-pixabay-${electron.id * 567}">Download</a>
                 </div>
                 <div class="gallery-overflow">
                     <img src="${electron.url}" alt="Mountain">
@@ -40,7 +41,11 @@ const app = () => {
         downloadPopup.classList.remove("active") ;
         popup.classList.remove("active") ;
     });
-    // galleryBtn.addEventListener("click", viewGallery);
+
+    search.addEventListener("keyup", () => {
+        const input = search.value.trim();
+        filterCollection(input);
+    });
 }
 
 if(document.body.classList.contains('app')){
@@ -48,6 +53,16 @@ if(document.body.classList.contains('app')){
 }
 if(document.body.classList.contains('gal')){
     displayLocalsInGallery();
+}
+
+function filterCollection(input) {
+    Array.from(gallery.children)
+        .filter(collection => !collection.getAttribute("data-category").includes(input))
+        .forEach(collection => collection.classList.add("filtered"));
+
+    Array.from(gallery.children)
+        .filter(collection => collection.getAttribute("data-category").includes(input))
+        .forEach(collection => collection.classList.remove("filtered"));
 }
 // functions
 function saveToGallery(e) {

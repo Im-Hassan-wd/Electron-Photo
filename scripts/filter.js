@@ -16,7 +16,7 @@ function searchCategory(input) {
                 <div class="image-gallery">
                     <div class="option">
                         <h3>${filter.name}</h3>
-                        <a href="${filter.url}" download="pexel-pixar-${filter.id * 567}">Download</a>
+                        <a href="${filter.url}" download="pexel-pixabay-${filter.id * 567}">Download</a>
                     </div>
                     <div class="gallery-overflow">
                         <img src="${filter.url}" alt="Mountain">
@@ -29,11 +29,11 @@ function searchCategory(input) {
     } else if(filtered.length === 0) {
         data.forEach(electron => {
             let html =``;
-            html = `
+            html += `
                 <div class="image-gallery">
                     <div class="option">
                         <h3>${electron.name}</h3>
-                        <a href="${electron.url}" download="pexel-pixar-${electron.id * 567}">Download</a>
+                        <a href="${electron.url}" download="pexel-pixabay-${electron.id * 567}">Download</a>
                     </div>
                     <div class="gallery-overflow">
                         <img src="${electron.url}" alt="Mountain">
@@ -41,7 +41,7 @@ function searchCategory(input) {
                     <button style="background:${electron.color}" class="color">${electron.color}</button>
                 </div>
             `;
-            gallery.innerHTML += html;
+            gallery.innerHTML = html;
         });
     }
 }

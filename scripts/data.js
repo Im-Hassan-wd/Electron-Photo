@@ -145,5 +145,19 @@ let data = [
         "url": "interior/interior1.jpg",
         "category": "interior",
         "color": "#004b6d"
+    },
+    {
+        "id": 22,
+        "name": "Sofas",
+        "url": "interior/interior2.jpg",
+        "category": "interior",
+        "color": "#004b6d"
+    },
+    {
+        "id": 23,
+        "name": "Sofas",
+        "url": "interior/interior3.jpg",
+        "category": "interior",
+        "color": "#004b6d"
     } 
 ];
