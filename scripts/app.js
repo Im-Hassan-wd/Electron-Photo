@@ -138,7 +138,7 @@ function displayLocalsInGallery(){
         //local div
         const localDiv = document.createElement("div");
         localDiv.classList.add("local-div");
-        galleryImages.append(localDiv);
+        galleryImages.prepend(localDiv);
 
         //local image 
         const localImage = document.createElement("img");
