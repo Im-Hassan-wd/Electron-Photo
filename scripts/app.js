@@ -56,13 +56,16 @@ if(document.body.classList.contains('gal')){
 }
 
 function filterCollection(input) {
-    Array.from(gallery.children)
-        .filter(collection => !collection.getAttribute("data-category").includes(input))
-        .forEach(collection => collection.classList.add("filtered"));
+    if (input.length > 3) {
+        Array.from(gallery.children)
+            .filter(collection => !collection.getAttribute("data-category").includes(input))
+            .forEach(collection => collection.classList.add("filtered"));
 
-    Array.from(gallery.children)
-        .filter(collection => collection.getAttribute("data-category").includes(input))
-        .forEach(collection => collection.classList.remove("filtered"));
+    } else {
+        Array.from(gallery.children)
+            .filter(collection => collection.getAttribute("data-category").includes(input))
+            .forEach(collection => collection.classList.remove("filtered"));
+    }
 }
 // functions
 function saveToGallery(e) {
