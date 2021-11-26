@@ -279,7 +279,7 @@ li h3 {
 }
 
 .local-div > img {
-  height: 355px;
+ /* height: 355px;*/
 }
 
 .download-btn {
