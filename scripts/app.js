@@ -154,7 +154,6 @@ function displayLocalsInGallery(){
         const download = document.createElement("img");
         download.src = "collection/download.svg";
         downloadBtn.append(download);
-        
     });
 }
 
