@@ -86,6 +86,7 @@ if(document.body.classList.contains('app')){
 }
 if(document.body.classList.contains('gal')){
     displayLocalsInGallery();
+    usersName();
 }
 
 function filterCollection(input) {
@@ -103,8 +104,9 @@ function filterCollection(input) {
 
 function usersName () {
     const name = JSON.parse(localStorage.getItem("name"));
-    console.log(name);
-
+    name.forEach(usersName => {
+        console.log(usersName)
+    });
 }
 // functions
 function saveToGallery(e) {
