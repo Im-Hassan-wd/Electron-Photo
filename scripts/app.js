@@ -105,7 +105,7 @@ function filterCollection(input) {
 function usersName () {
     const name = JSON.parse(localStorage.getItem("name"));
     name.forEach(usersName => {
-        console.log(usersName)
+        galleryName.innerText = usersName;
     });
 }
 // functions
