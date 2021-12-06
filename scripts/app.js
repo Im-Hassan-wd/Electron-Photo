@@ -20,6 +20,8 @@ const app = () => {
         search.placeholder = placeholder;
     }, 5000);
 
+    removeInputContainer();
+
     data.forEach(electron => {
         let html =``;
         html = `
@@ -104,6 +106,12 @@ function usersName () {
     name.forEach(usersName => {
         galleryName.innerText = usersName;
     });
+}
+
+function removeInputContainer() {
+    if(localStorage.getItem("name") != null){
+        inputContainer.remove();
+    }
 }
 // functions
 function saveToGallery(e) {
