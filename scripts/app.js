@@ -36,10 +36,7 @@ const app = () => {
         `;
         gallery.innerHTML += html;
     });
-    //removed the input container when user name is provided
-    if(localStorage.getItem("name") === null){
-        inputContainer.remove();
-    }
+    //remove the input container when user name is provided
 
     inputForm.addEventListener("submit", (e) => {
         e.preventDefault();
