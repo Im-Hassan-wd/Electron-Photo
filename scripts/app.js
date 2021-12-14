@@ -100,6 +100,12 @@ function filterCollection(input) {
             .forEach(collection => collection.classList.remove("filtered"));
     }
 }
+
+function usersName () {
+    const name = JSON.parse(localStorage.getItem("name"));
+    console.log(name);
+
+}
 // functions
 function saveToGallery(e) {
     if(e.target.tagName === "A"){
