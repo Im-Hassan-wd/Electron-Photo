@@ -40,7 +40,18 @@ const app = () => {
         e.preventDefault();
         //getting user input
         const input = inputForm.input.value.trim();
+        console.log(input)
         //store input in local storage
+        let name;
+
+        if(localStorage.getItem("name") === null){
+            name = [];
+        } else {
+            name = JSON.parse(localStorage.getItem("name"));
+        }
+        name.push(input);
+        console.log(input)
+        localStorage.setItem("name", JSON.stringify(name));
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
