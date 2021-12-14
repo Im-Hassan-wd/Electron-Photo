@@ -7,6 +7,7 @@ const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
 const inputForm = document.querySelector(".input-popup form");
 const inputContainer = document.querySelector(".input-container");
+const galleryName =  document.querySelector(".gallery-text h1");
 let category = ['creative...', 'interior...', 'mountain...'];
 //
 // Event listerners
