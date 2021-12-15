@@ -6,7 +6,7 @@ const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
 const inputForm = document.querySelector(".input-popup form");
-console.log(input)
+console.log(inputForm)
 let category = ['creative...', 'interior...', 'mountain...'];
 //
 
@@ -39,8 +39,8 @@ const app = () => {
     inputForm.addEventListener("submit", (e) => {
         e.preventDefault();
         //getting user input
-        const input = inputForm.input.value.trim();
-        console.log(input)
+        const inputName = inputForm.inputName.value.trim();
+        console.log(inputName)
         //store input in local storage
         let name;
 
@@ -49,8 +49,7 @@ const app = () => {
         } else {
             name = JSON.parse(localStorage.getItem("name"));
         }
-        name.push(input);
-        console.log(input)
+        name.push(inputName);
         localStorage.setItem("name", JSON.stringify(name));
     });
     gallery.addEventListener("click", (e) => {
