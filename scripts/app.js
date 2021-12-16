@@ -51,6 +51,9 @@ const app = () => {
         }
         name.push(inputName);
         localStorage.setItem("name", JSON.stringify(name));
+
+        //remove the input field
+        inputForm.remove();
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
