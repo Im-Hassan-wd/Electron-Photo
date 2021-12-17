@@ -36,6 +36,11 @@ const app = () => {
         `;
         gallery.innerHTML += html;
     });
+    //removed the input container when user name is provided
+    if(localStorage.getItem("name") === null){
+
+    }
+
     inputForm.addEventListener("submit", (e) => {
         e.preventDefault();
         //getting user input
@@ -53,7 +58,7 @@ const app = () => {
         localStorage.setItem("name", JSON.stringify(name));
 
         //remove the input field
-        inputContainer.remove()
+        inputContainer.remove();
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
