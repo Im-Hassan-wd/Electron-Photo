@@ -10,7 +10,6 @@ const inputContainer = document.querySelector(".input-container");
 console.log(inputForm)
 let category = ['creative...', 'interior...', 'mountain...'];
 //
-
 // Event listerners
 // preventing other html file from unconditional err
 const app = () => {
@@ -54,7 +53,7 @@ const app = () => {
         localStorage.setItem("name", JSON.stringify(name));
 
         //remove the input field
-        inputForm.remove();
+        inputContainer.remove()
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
