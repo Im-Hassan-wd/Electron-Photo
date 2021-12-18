@@ -7,7 +7,6 @@ const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
 const inputForm = document.querySelector(".input-popup form");
 const inputContainer = document.querySelector(".input-container");
-console.log(inputForm)
 let category = ['creative...', 'interior...', 'mountain...'];
 //
 // Event listerners
@@ -38,7 +37,7 @@ const app = () => {
     });
     //removed the input container when user name is provided
     if(localStorage.getItem("name") === null){
-
+        inputContainer.remove();
     }
 
     inputForm.addEventListener("submit", (e) => {
