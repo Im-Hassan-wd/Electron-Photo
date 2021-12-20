@@ -126,7 +126,8 @@
 }
 
 .download-container,
-.copy-container {
+.copy-container,
+.input-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -279,7 +280,7 @@ li h3 {
 }
 
 .local-div > img {
- height: 280px;
+  height: 280px;
 }
 
 .download-btn {
