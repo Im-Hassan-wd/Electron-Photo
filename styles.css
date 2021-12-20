@@ -142,7 +142,8 @@
 }
 
 .download-popup,
-.copy-popup {
+.copy-popup,
+.input-popup {
   background: white;
   display: flex;
   justify-content: space-evenly;
