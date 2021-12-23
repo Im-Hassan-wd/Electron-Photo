@@ -152,6 +152,11 @@
   align-items: center;
 }
 
+.input-container input {
+  width: 200px;
+  height: 30px;
+}
+
 .download-popup,
 .copy-popup {
   background: white;
