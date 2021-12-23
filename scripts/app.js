@@ -5,6 +5,7 @@ const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
+const input = document.querySelector(".input-popup input")
 let category = ['creative...', 'interior...', 'mountain...'];
 //
 
