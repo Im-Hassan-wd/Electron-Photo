@@ -35,7 +35,9 @@ const app = () => {
         `;
         gallery.innerHTML += html;
     });
+    input.addEventListener("submit", () => {
 
+    });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
         copyToClipboard(e)
