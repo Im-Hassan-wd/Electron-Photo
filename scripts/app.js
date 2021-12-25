@@ -40,7 +40,7 @@ const app = () => {
         e.preventDefault();
         //getting user input
         const input = inputForm.input.value.trim();
-        console.log(input)
+        //store input in local storage
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
