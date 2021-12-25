@@ -5,7 +5,7 @@ const downloadPopup = document.querySelector(".download-container");
 const galleryBtn = document.querySelector(".gallery-btn button");
 const galleryImages = document.querySelector(".gallery-images");
 const search = document.querySelector("input[type='text']");
-const input = document.querySelector(".input-popup input");
+const inputForm = document.querySelector(".input-popup form");
 console.log(input)
 let category = ['creative...', 'interior...', 'mountain...'];
 //
@@ -36,11 +36,11 @@ const app = () => {
         `;
         gallery.innerHTML += html;
     });
-    input.addEventListener("submit", (e) => {
-        // e.preventDefault();
+    inputForm.addEventListener("submit", (e) => {
+        e.preventDefault();
         //getting user input
-        const userInput = input.input;
-        console.log(userInput)
+        const input = inputForm.input.value.trim();
+        console.log(input)
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
