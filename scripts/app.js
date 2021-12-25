@@ -37,8 +37,10 @@ const app = () => {
         gallery.innerHTML += html;
     });
     input.addEventListener("submit", (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         //getting user input
+        const userInput = input.input;
+        console.log(userInput)
     });
     gallery.addEventListener("click", (e) => {
         saveToGallery(e);
